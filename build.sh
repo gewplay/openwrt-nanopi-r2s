@@ -85,6 +85,12 @@ pushd openwrt
 ./scripts/feeds install -a
 popd
 
+#ssh
+pushd openwrt
+git clone https://github.com/gewplay/debugger-action
+bash ./debugger-action/script.sh
+popd
+
 # customize configs
 pushd openwrt
 cat ../config.seed > .config
